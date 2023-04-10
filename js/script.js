@@ -249,18 +249,18 @@ function buildMenuItemsViewHtml(categoryMenuItems,
   menuItemsTitleHtml =
     insertProperty(menuItemsTitleHtml,
                    "name",
-                   categoryMenuItems.category.name);
+                   categoryMenuItems.categories.name);
   menuItemsTitleHtml =
     insertProperty(menuItemsTitleHtml,
                    "special_instructions",
-                   categoryMenuItems.category.special_instructions);
+                   categoryMenuItems.categories.special_instructions);
 
   var finalHtml = menuItemsTitleHtml;
   finalHtml += "<section class='row'>";
 
   // Loop over menu items
   var menuItems = categoryMenuItems.menu_items;
-  var catShortName = categoryMenuItems.category.short_name;
+  var catShortName = categoryMenuItems.categories.short_name;
   for (var i = 0; i < menuItems.length; i++) {
     // Insert menu item values
     var html = menuItemHtml;
